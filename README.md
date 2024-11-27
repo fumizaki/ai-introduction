@@ -1,1 +1,1 @@
-# ai-introduction
+# ai-primer

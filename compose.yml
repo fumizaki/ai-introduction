@@ -1,0 +1,15 @@
+services:
+
+  web:
+    container_name: web
+    build:
+      context: .
+      dockerfile: ./docker/web/Dockerfile
+    volumes:
+      - ./app/web/:/web/
+    ports:
+      - "${WEB_PORT}:${WEB_PORT}"
+    restart: always
+    env_file:
+      - ./app/web/.env
+
