@@ -1,17 +1,19 @@
 import streamlit as st
 
 from components.iris.table.dataframe import render_dataframe
+from components.iris.graph.perceptron import render_perceptron
+
 
 def render_page() -> None:
     st.title("Iris")
     
-    tab1, tab2, tab3 = st.tabs(["Table", "Plot", "Summary"])
+    tab1, tab2, tab3 = st.tabs(["Table", "Perceptron", "Summary"])
     
     with tab1:
         render_dataframe()
         
     with tab2:
-        st.write("Plot")
+        render_perceptron()
         
     with tab3:
         st.write("Summary")
