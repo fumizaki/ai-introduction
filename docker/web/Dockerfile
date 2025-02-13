@@ -17,7 +17,7 @@ RUN poetry config virtualenvs.create false
 
 # アプリケーションの依存関係をインストール
 COPY ./app/web/pyproject.toml ./app/web/poetry.lock .
-RUN poetry install
+RUN poetry install --no-root
 
 COPY ./app/web .
 
